@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.720c349c.css",
+    "main.js": "/static/js/main.1549aa36.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/profile-pic.jpg": "/static/media/profile-pic.78691402d56cc9f842fc.jpg",
+    "static/media/background.jpg": "/static/media/background.f44d6df75c7939672aa6.jpg",
+    "static/media/hscLogo.jpeg": "/static/media/hscLogo.83911a44fb5551534e5a.jpeg",
+    "static/media/btech-logo.jpeg": "/static/media/btech-logo.dedb141f2d5e5f35a6ba.jpeg",
+    "index.html": "/index.html",
+    "main.720c349c.css.map": "/static/css/main.720c349c.css.map",
+    "main.1549aa36.js.map": "/static/js/main.1549aa36.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.720c349c.css",
+    "static/js/main.1549aa36.js"
+  ]
+}
