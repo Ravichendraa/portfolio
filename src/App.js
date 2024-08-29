@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Introduction from './components/Introduction';
+import AboutMe from './components/AboutMe';
+import Education from './components/Education';
+import Projects from './components/Projects';
+import Platforms from './components/Platforms';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav className="navbar">
+        <Link to="/" className="flash-link">Introduction</Link>
+        <Link to="/about-me" className="flash-link">About Me</Link>
+        <Link to="/education" className="flash-link">Education</Link>
+        <Link to="/projects" className="flash-link">Projects</Link>
+        <Link to="/platforms" className="flash-link">Platforms</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Introduction />} />
+        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/platforms" element={<Platforms />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

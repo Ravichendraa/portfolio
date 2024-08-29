@@ -1,38 +1,262 @@
-.App {
+
+
+body {
+  padding-top: 4rem;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar a:hover {
+  color: #ccc;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.introduction {
+  background-color: #f7f7f7;
+}
+
+.about-me {
+  background-color: #fff;
+}
+
+.education {
+  background-color: #f7f7f7;
+}
+
+.projects {
+  background-color: #fff;
+}
+
+.platforms {
+  background-color: #f7f7f7;
+}
+
+.introduction {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.profile-image {
+  object-fit: cover; /* Add this line */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+}
+
+.content {
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.highlighted-name {
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.flash-link {
+  position: relative;
+}
+
+.flash-link:hover {
+  color: orange;
+}
+
+.flash-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  animation: flash 1s infinite ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+    height: 2px;
+  }
+  50% {
+    opacity: 0;
+    height: 5px;
+  }
+  100% {
+    opacity: 1;
+    height: 2px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.timeline {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card{
+  width: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-card {
+  position: relative;
+}
+
+.timeline-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 20px;
+  height: 4px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 20px;
+  height: 4px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-card:nth-child(even)::before {
+  left: auto;
+  right: -20px;
+}
+
+
+
+
+
+.timeline-card:nth-child(1) {
+  transform: translateX(305px);
+}
+.timeline-card:nth-child(3) {
+  transform: translateX(168px);
+}
+.timeline-card:nth-child(2) {
+  transform: translateX(-200px);
+}
+
+
+
+
