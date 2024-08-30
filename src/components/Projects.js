@@ -25,7 +25,7 @@ const Projects = () => {
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <p>Tech Stack: {project.techStack.join(', ')}</p>
-            <a href={project.link} target="_blank">View Project</a>
+            
           </li>
         ))}
       </ul>
